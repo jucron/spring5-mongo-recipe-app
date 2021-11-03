@@ -34,7 +34,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
     }
 
     @Override
-    @Transactional
+//    @Transactional
     public void onApplicationEvent(ContextRefreshedEvent event) {
         loadCategories();
         loadUom();
