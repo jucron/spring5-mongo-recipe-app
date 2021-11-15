@@ -19,7 +19,7 @@ import java.util.Optional;
  * Created by jt on 6/13/17.
  */
 @Slf4j
-@Component
+//@Component
 public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEvent> {
 
     private final CategoryRepository categoryRepository;
@@ -34,7 +34,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
     }
 
     @Override
-//    @Transactional
+    @Transactional
     public void onApplicationEvent(ContextRefreshedEvent event) {
         loadCategories();
         loadUom();
